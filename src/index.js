@@ -48,7 +48,6 @@ export const mapQueries = normalizeNamespace((namespace, map) => {
       }
     }
   })
-  console.log(res)
   return res
 })
 

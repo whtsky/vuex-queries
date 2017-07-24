@@ -1,6 +1,6 @@
 {
   "name": "vuex-queries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "repository": "git@github.com:whtsky/vuex-queries.git",
   "author": "Wu Haotian <whtsky@gmail.com>",
