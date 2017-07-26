@@ -3,5 +3,5 @@ node_js:
   - node
 cache: yarn
 after_success:
-  - yarn add coveralls
-  - './node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls'
+  - yarn add codecov
+  - './node_modules/.bin/nyc report --reporter=lcov > coverage.lcov && ./node_modules/.bin/codecov'
