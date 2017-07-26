@@ -6,5 +6,11 @@
         "es6-promise": "Promise"
       }
     }]
-  ]
+  ],
+  "ignore": "test.js",
+  "env": {
+      "development": {
+          "sourceMaps": "inline"
+      }
+  }
 }

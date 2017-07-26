@@ -1,4 +1,6 @@
 /index.js
+coverage
+.nyc_output
 
 # Logs
 logs
