@@ -84,7 +84,7 @@ test('mapQueries works with namespace and a nested module', t => {
   }))
   const vm = new Vue({
     store,
-    methods: mapQueries('foo/bar', ['getEventByAuthors'])
+    methods: mapQueries('foo/bar/', ['getEventByAuthors'])
   })
   t.deepEqual(vm.getEventByAuthors(['a', 'c']), [{id: 3, author: ['c', 'a']}])
 })
@@ -101,3 +101,23 @@ test('console.error when queries not defined', t => {
   console.error.restore()
 })
 
+test('console.error when queries unknown', t => {
+  const store = new Vuex.Store(supportQuery({
+    queries: {
+      foo () {
+        console.log('fired')
+        return 123
+      }
+    }
+  }))
+  const vm = new Vue({
+    store,
+    methods: mapQueries(['foo', 'bar'])
+  })
+  const stub = sinon.stub(console, 'error')
+  t.is(vm.foo(), 123)
+  t.is(stub.callCount, 0)
+  t.is(vm.bar(), undefined, 'returns undefined when queries not defined')
+  t.is(stub.callCount, 1)
+  console.error.restore()
+})
