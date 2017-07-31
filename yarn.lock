@@ -3116,6 +3116,10 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
+pkg-ok@^1.1.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/pkg-ok/download/pkg-ok-1.1.0.tgz#0698b66d248183f7e3f2529262eeacdff7cef371"
+
 pkg-up@^1.0.0:
   version "1.0.0"
   resolved "http://registry.npm.taobao.org/pkg-up/download/pkg-up-1.0.0.tgz#3e08fb461525c4421624a33b9f7e6d0af5b05a26"
