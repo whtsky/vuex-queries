@@ -1,6 +1,8 @@
-import test from 'ava'
 import Vue from 'vue'
 import Vuex from 'vuex'
+
+import test from 'ava'
+import sinon from 'sinon'
 
 Vue.use(Vuex)
 
@@ -86,3 +88,16 @@ test('mapQueries works with namespace and a nested module', t => {
   })
   t.deepEqual(vm.getEventByAuthors(['a', 'c']), [{id: 3, author: ['c', 'a']}])
 })
+
+test('console.error when queries not defined', t => {
+  const store = new Vuex.Store({})
+  const vm = new Vue({
+    store,
+    methods: mapQueries(['foo'])
+  })
+  const stub = sinon.stub(console, 'error')
+  t.is(vm.foo(), undefined, 'returns undefined when queries not defined')
+  t.is(stub.callCount, 1)
+  console.error.restore()
+})
+

@@ -15,7 +15,7 @@ export function supportQuery (options) {
         }
         return processed
       }
-    }, options.getters)
+    }, options.getters || {})
   }
 
   if (isObject(options.modules)) {
