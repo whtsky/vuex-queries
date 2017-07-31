@@ -1,6 +1,10 @@
 # Vuex-Queries
 
+[![Build Status](https://travis-ci.org/whtsky/vuex-queries.svg?branch=master)](https://travis-ci.org/whtsky/vuex-queries)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![codecov](https://codecov.io/gh/whtsky/vuex-queries/branch/master/graph/badge.svg)](https://codecov.io/gh/whtsky/vuex-queries)
+[![NPM version](https://img.shields.io/npm/v/vuex-queries.svg?style=flat)](https://npmjs.com/package/vuex-queries)
+
 
 Vuex-Queries helps you write query functions in Vuex
 
@@ -60,3 +64,4 @@ export default {
   }
 }
 ```
+
