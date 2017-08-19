@@ -8,10 +8,12 @@ export function supportQuery (options) {
   const result = Object.assign({}, options)
   if (isObject(options.queries)) {
     result.getters = Object.assign({}, {
-      [QUERYS_KEY]: (state, getters) => {
+      [QUERYS_KEY]: (state, getters, rootState, rootGetters) => {
         const processed = {}
         for (const key in options.queries) {
-          processed[key] = options.queries[key].bind(this, {state, getters})
+          processed[key] = options.queries[key].bind(this, {
+            state, getters, rootState, rootGetters
+          })
         }
         return processed
       }

@@ -1,6 +1,7 @@
 {
   "name": "vuex-queries",
-  "version": "1.0.1",
+  "version": "1.1.0",
+  "description": "Vuex-Queries helps you write query functions in Vuex",
   "main": "index.js",
   "repository": "git@github.com:whtsky/vuex-queries.git",
   "author": "Wu Haotian <whtsky@gmail.com>",

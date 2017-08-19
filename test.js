@@ -89,6 +89,34 @@ test('mapQueries works with namespace and a nested module', t => {
   t.deepEqual(vm.getEventByAuthors(['a', 'c']), [{id: 3, author: ['c', 'a']}])
 })
 
+test('supports rootState and rootGetters', t => {
+  const store = new Vuex.Store(supportQuery({
+    state: {
+      a: 'b'
+    },
+    getters: {
+      c (state) {
+        return state.a + 'd'
+      }
+    },
+    modules: {
+      foo: {
+        namespaced: true,
+        queries: {
+          bar ({rootState, rootGetters}, append) {
+            return rootState.a + rootGetters.c + append
+          }
+        }
+      }
+    }
+  }))
+  const vm = new Vue({
+    store,
+    methods: mapQueries('foo', ['bar'])
+  })
+  t.is(vm.bar('v'), 'bbdv')
+})
+
 test('console.error when queries not defined', t => {
   const store = new Vuex.Store({})
   const vm = new Vue({

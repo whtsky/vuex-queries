@@ -37,6 +37,30 @@ const options = {
 }
 ```
 
+Inside module queries, context will also contain `rootState` and `rootGetters`.
+```js
+const options = {
+  state: {
+    events: [{id: 1, author: ['a', 'b']}, {id: 2, author: ['b', 'c']}, {id: 3, author: ['c', 'a']}],
+  },
+  computed: {
+    currentAuthor (state) {
+      return state.author[0]
+    }
+  },
+  modules: {
+    foo: {
+      namespaced: true,
+      queries: {
+        getEvents ({rootState, rootGetters}, authors) {
+          return rootState.events.filter(e => authors.concat(rootGetters.currentAuthor).every(author => e.author.includes(author)))
+        }
+      }
+    }
+  }
+}
+```
+
 Before creating Vuex store, transform the options with `supportQuery(options)` method:
 ```js
 import Vuex from 'vuex'
@@ -65,3 +89,7 @@ export default {
 }
 ```
 
+## Changelog
+### v1.1.0
+
++ Add support for `rootState` & `rootGetters`
