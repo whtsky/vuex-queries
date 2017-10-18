@@ -90,6 +90,11 @@ export default {
 ```
 
 ## Changelog
+
+### v1.1.1
+
++ update peerDependencies to allow work with Vuex 3.x
+
 ### v1.1.0
 
 + Add support for `rootState` & `rootGetters`
