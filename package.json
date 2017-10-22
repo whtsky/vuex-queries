@@ -25,7 +25,7 @@
     "vuex": "> 2.0 < 4"
   },
   "devDependencies": {
-    "ava": "^0.21.0",
+    "ava": "^0.22.0",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.25.0",
     "babel-plugin-istanbul": "^4.1.4",
@@ -37,7 +37,7 @@
     "nyc": "^11.0.3",
     "pkg-ok": "^1.1.0",
     "pre-commit": "^1.2.2",
-    "sinon": "^2.4.1",
+    "sinon": "^4.0.1",
     "standard": "^10.0.2",
     "vue": "^2.4.2",
     "vuex": "^2.3.1"
