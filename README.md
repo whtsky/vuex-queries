@@ -4,6 +4,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 [![codecov](https://codecov.io/gh/whtsky/vuex-queries/branch/master/graph/badge.svg)](https://codecov.io/gh/whtsky/vuex-queries)
 [![NPM version](https://img.shields.io/npm/v/vuex-queries.svg?style=flat)](https://npmjs.com/package/vuex-queries)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwhtsky%2Fvuex-queries.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwhtsky%2Fvuex-queries?ref=badge_shield)
 
 
 Vuex-Queries helps you write query functions in Vuex
@@ -98,3 +99,7 @@ export default {
 ### v1.1.0
 
 + Add support for `rootState` & `rootGetters`
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fwhtsky%2Fvuex-queries.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fwhtsky%2Fvuex-queries?ref=badge_large)
