@@ -4986,9 +4986,9 @@ verror@1.3.6:
   dependencies:
     extsprintf "1.0.2"
 
-vue@2.5.16:
-  version "2.5.16"
-  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.16.tgz#07edb75e8412aaeed871ebafa99f4672584a0085"
+vue@2.5.21:
+  version "2.5.21"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.21.tgz#3d33dcd03bb813912ce894a8303ab553699c4a85"
 
 vuex@3.0.1:
   version "3.0.1"
